@@ -1,0 +1,158 @@
+.footer {
+    .inner {
+        .footer-top {
+            position: relative;
+            height: auto;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            .left-text {
+                padding: 15px 0;
+
+                .text-wrap {
+                    position: relative;
+                    float: left;
+                    padding: 0 10px;
+
+                    &:first-child {
+                        padding-left: 0;
+
+                        &>a::before {
+                            content: none;
+                        }
+                    }
+
+                    &.second a {
+                        color: #000;
+                        font-weight: 700;
+                    }
+
+                    a {
+                        font-size: 12px;
+                        color: #636363;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            display: block;
+                            width: 1px;
+                            height: 14px;
+                            margin-top: -6px;
+                            background: #dcdcdc;
+                        }
+                    }
+                }
+            }
+
+            .right-img {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -14px;
+                font-size: 0;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../images/icon_set_sns_202309.png) no-repeat;
+                    font-size: 0;
+                    text-indent: -9999em;
+                    background-position-y: 0px;
+
+                    &+a {
+                        margin-left: 12px;
+                    }
+
+                    &:hover {
+                        background-position-y: -25px;
+                    }
+
+                    &:nth-child(1) {
+                        background-position-x: -25px;
+                    }
+
+                    &:nth-child(2) {
+                        background-position-x: -50px;
+                    }
+
+                    &:nth-child(3) {
+                        background-position-x: -75px;
+                    }
+
+                    &:nth-child(4) {
+                        background-position-x: -100px;
+                    }
+
+                    &:nth-child(5) {
+                        background-position-x: -125px;
+                    }
+
+                    &:nth-child(6) {
+                        background-position-x: -150px;
+                    }
+
+                    &:nth-child(7) {
+                        background-position-x: -175px;
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            position: relative;
+            padding: 22px 0;
+            border-top: 1px solid #ccc;
+
+            .logo {
+                margin-right: 40px;
+                float: left;
+                width: 108px;
+                height: 45px;
+                background: url(../images/icon_set_common.png) no-repeat -180px 0;
+
+            }
+
+            address {
+                display: inline-block;
+                vertical-align: top;
+                color: #636363;
+                font-size: 12px;
+
+                .addr {
+                    &:last-child {
+                        padding-bottom: 2px;
+                    }
+                }
+
+                .copy {
+                    font-size: 11px;
+                }
+            }
+
+            .right-logo {
+                position: absolute;
+                top: 20px;
+                right: 0;
+                padding: 0;
+                background: none;
+
+                a {
+                    display: inline-block;
+
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
