@@ -63,7 +63,7 @@
             }
         }
 
-        .btn_close {
+        .btn-close {
             width: 24px;
             height: 24px;
             display: inline-block;
@@ -74,7 +74,7 @@
         }
     }
 
-    .menu {
+    .group-top {
         display: flex;
 
         .logo {
@@ -98,7 +98,7 @@
             .left-menu {
                 display: flex;
 
-                .left-item {
+                li {
                     margin-left: 20px;
                     position: relative;
 
@@ -127,7 +127,7 @@
                 right: 0;
                 top: 0;
 
-                .right-item {
+                li {
                     padding: 0 10px;
                     margin: 0;
 
@@ -148,7 +148,7 @@
         }
     }
 
-    .search {
+    .group-bottom {
         display: flex;
         position: relative;
         background: #fff;
@@ -176,12 +176,37 @@
             justify-content: center;
             overflow: hidden;
 
+            fieldset {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border: none;
+
+                &::after {
+                    content: '';
+                    background: url(../images/keyboard.png) no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: 50%;
+                    right: 47.5px;
+                    transform: translateY(-50%);
+                    width: 29px;
+                    height: 16px;
+                    cursor: pointer;
+                }
+            }
+
             input {
                 width: calc(100% - 42px);
                 border: 0;
                 padding: 0 10px;
                 height: 38px;
                 line-height: 38px;
+                position: relative;
+
+                &::placeholder {
+                    color: #2292e9;
+                }
             }
 
             img {
@@ -232,7 +257,7 @@
                 margin-left: 15px;
                 text-align: left;
 
-                .txt-weather {
+                .temp-wrap {
                     a {
                         .deg {
                             font-size: 25px;
@@ -247,7 +272,7 @@
                     }
                 }
 
-                .txt-box {
+                .dust-wrap {
                     margin-top: 7px;
 
                     a {

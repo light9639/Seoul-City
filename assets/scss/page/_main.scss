@@ -5,7 +5,7 @@
         line-height: 1.35em;
     }
 
-    .sc-visual {
+    .inner1 {
         display: flex;
         height: 350px;
         overflow: hidden;
@@ -325,7 +325,7 @@
         }
     }
 
-    .sc-service {
+    .inner2 {
         position: relative;
         padding: 50px 0 0;
 
@@ -447,7 +447,7 @@
         }
     }
 
-    .sc-bgImg {
+    .inner3 {
         margin-top: 35px;
         background: #eff4f8;
 
@@ -493,7 +493,7 @@
         }
     }
 
-    .sc-notice {
+    .inner4 {
         padding: 50px 0 50px;
         border-bottom: 2px solid #222222;
         display: flex;
@@ -628,7 +628,7 @@
         }
     }
 
-    .sc-information {
+    .inner5 {
         padding-top: 40px;
 
         h2 {
@@ -671,7 +671,7 @@
         }
     }
 
-    .sc-news {
+    .inner6 {
         position: relative;
         padding: 20px 0 30px;
 
@@ -772,7 +772,7 @@
         }
     }
 
-    .sc-board {
+    .inner7 {
         display: flex;
         padding-bottom: 50px;
 
@@ -950,7 +950,7 @@
         }
     }
 
-    .sc-popupBanner {
+    .inner8 {
         position: relative;
         padding: 50px 0 50px 0;
         border-top: 2px solid #222;
@@ -1072,7 +1072,7 @@
         }
     }
 
-    .bottom-list {
+    .inner9 {
         .bottom-wrap {
             position: relative;
             margin-bottom: 20px;
@@ -1176,9 +1176,15 @@
     opacity: 0;
     transition: .75s;
     cursor: pointer;
+
+    &.fixed {
+        bottom: 100px;
+        opacity: 1;
+    }
 }
 
-.sc-top.fixed {
-    bottom: 100px;
-    opacity: 1;
+@media screen and (max-width: 1202px) {
+    .sc-top {
+        margin-left: 500px;
+    }
 }
