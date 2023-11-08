@@ -10,7 +10,7 @@ visualSlide1 = new Swiper('.visual-left .top-tab .swiper', {
         prevEl: ".top-tab .btn-prev"
     },
     pagination: {
-        el: ".visual-left .top-tab .index_count",
+        el: ".visual-left .top-tab .fraction",
         type: 'fraction',
     }
 })
@@ -27,35 +27,22 @@ visualSlide2 = new Swiper('.visual-left .bottom-tab .swiper', {
         prevEl: ".bottom-tab .btn-prev"
     },
     pagination: {
-        el: ".visual-left .bottom-tab .index_count",
+        el: ".visual-left .bottom-tab .fraction",
         type: 'fraction',
     }
 })
 
 // 탭 메뉴
-// $('.visual-left .tab').on("click", function () {
-//     var tab_id = $(this).attr('data-tab');
 
-//     $('.visual-left .tab').removeClass('current');
-
-//     $(this).addClass('current');
-// })
-
-// $('.visual-left .tab').on('keydown', function () {
-//     var tab_id = $(this).attr('data-tab');
-
-//     $('.visual-left .tab').removeClass('current');
-
-//     $(this).addClass('current');
-// })
-$('.visual-left .tab').click(function () {
+$('.visual-left .tab').click(function (e) {
+    e.preventDefault();
     $('.visual-left .tab').removeClass('current');
     $(this).addClass('current')
 
     if ($(this).parents('.tab').data('tab') == 'tab-1') {
         //주요뉴스
         visualSlide2.autoplay.stop();
-        if ($('.visual-left .top-tab').find('.btn-pause').hasClass('on')) {
+        if ($('.visual-left .top-tab').find('.btn-autoplay').hasClass('on')) {
             visualSlide1.autoplay.stop();
         } else {
             visualSlide1.autoplay.start();
@@ -63,7 +50,7 @@ $('.visual-left .tab').click(function () {
     } else {
         //시민참여
         visualSlide1.autoplay.stop();
-        if ($('.visual-left .bottom-tab').find('.btn-pause').hasClass('on')) {
+        if ($('.visual-left .bottom-tab').find('.btn-autoplay').hasClass('on')) {
             visualSlide2.autoplay.stop();
         } else {
             visualSlide2.autoplay.start();
@@ -93,14 +80,14 @@ bottomSlide = new Swiper('.inner8 .swiper', {
         prevEl: ".inner8 .btn-prev"
     },
     pagination: {
-        el: ".inner8 .index_count",
+        el: ".inner8 .fraction",
         type: 'fraction',
     }
 })
 
 slideArr = [visualSlide1, visualSlide2, bottomSlide]
 
-$('.control .btn-pause').click(function (e) {
+$('.control .btn-autoplay').click(function (e) {
     e.preventDefault();
     idx = $(this).attr('data-id');
 
@@ -155,16 +142,28 @@ Top.onclick = () => {
 // 맨 아래쪽 하단리스트 나오게 하기
 $('.inner9 .btn-related').on('click', function () {
     if ($(this).hasClass('on')) {
-        $(this).focus().removeClass('on');
+        $(this).focus().removeClass('on').find('em').text('펼치기');
         $('.menu-list').slideUp(200);
     } else {
-        $('.bottom-item button').removeClass('on');
-        $(this).focus().addClass('on');
+        $('.bottom-item button').removeClass('on').find('em').text('펼치기');
+        $(this).focus().addClass('on').find('em').text('접기');
         $('.menu-list').slideUp(200);
         $(this).closest('li').find('.menu-list').slideDown(200);
     }
 });
 
+// 하단리스트 이외에 다른 부분 클릭시 접히도록
+$('body').on('click', function (e) {
+    if ($(!e.target).is('.menu-list') || !$(e.target).is('.txt-related')) {
+        if (!$(e.target).is('.btn-related')) {
+            $('.bottom-item button').removeClass('on').find('em').text('펼치기');
+            $('.btn-related').removeClass('on');
+            $('.menu-list').slideUp(200);
+        }
+    }
+});
+
+// tab 메뉴로 이동시 하단 리스트 나오게
 $('.inner9 .menu-list li:first-child').keydown(function (e) {
     if (e.keyCode === 9 && e.shiftKey) {
         $('.bottom-wrap .bottom-item button').removeClass('on').find('em').text('펼치기');

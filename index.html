@@ -73,18 +73,17 @@
                         <fieldset>
                             <legend class="blind">검색</legend>
                             <input type="text" name="kwd" placeholder="검색어를 입력해 주세요" title="검색어 입력">
-                            <!-- <img src="./assets/images/keyboard.png" alt="입력도구"> -->
                             <button type="button" class="btn btn-search">
                                 <span class="blind">검색하기</span>
                             </button>
                         </fieldset>
                     </form>
                     <div class="weather-wrap">
-                        <p class="ico-area">
+                        <div class="ico-area">
                             <a href="#">
                                 <img src="./assets/images/weathericon.png" alt="흐림">
                             </a>
-                        </p>
+                        </div>
                         <div class="txt-area">
                             <p class="temp-wrap">
                                 <a href="#">
@@ -179,18 +178,11 @@
                                     </div>
                                 </div>
                                 <div class="control">
-                                    <div class="pagers">
-                                        <span class="index_count"></span>
-                                    </div>
-                                    <div class="btn-prev">
-                                        <a class="bx-prev" href="#">이전</a>
-                                    </div>
-                                    <div class="btn-pause" data-id="0">
-                                        <a href="#" class="btn-mb-start">슬라이드 시작</a>
-                                        <a href="#" class="btn-mb-stop">슬라이드 정지</a>
-                                    </div>
-                                    <div class="btn-next">
-                                        <a class="bx-next" href="#">다음</a>
+                                    <div class="fraction"></div>
+                                    <div class="btn-wrap">
+                                        <button class="btn-prev"><span class="blind">이전버튼</span></button>
+                                        <button class="btn-autoplay on"><span class="blind">자동재생정지</span></button>
+                                        <button class="btn-next"><span class="blind">다음버튼</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -229,32 +221,26 @@
                                     </div>
                                 </div>
                                 <div class="control">
-                                    <div class="pagers">
-                                        <span class="index_count"></span>
+                                    <div class="fraction"></div>
+                                    <div class="btn-wrap">
+                                        <button class="btn-prev"><span class="blind">이전버튼</span></button>
+                                        <button class="btn-autoplay on"><span class="blind">자동재생정지</span></button>
+                                        <button class="btn-next"><span class="blind">다음버튼</span></button>
                                     </div>
-                                    <ul class="number">
-                                        <li class="btn-prev">
-                                            <a class="bx-prev" href="#">이전</a>
-                                        </li>
-                                        <li class="btn-pause" data-id="1">
-                                            <a href="#" class="btn-mb-start">슬라이드 시작</a>
-                                            <a href="#" class="btn-mb-stop">슬라이드 정지</a>
-                                        </li>
-                                        <li class="btn-next">
-                                            <a class="bx-next" href="#">다음</a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="visual-right">
-                        <h2 class="blind">메인배너오른쪽</h2>
-                        <div class="top-img">
-                            <img src="./assets/images/visual-right-top.jpg" alt class="bg">
-                            <span>'약자동행지수' 개발, 약자 정책 평가·활용 최초의 시도</span>
-                        </div>
-                        <div class="bottom-img">
+                    <div class="col-right">
+                        <section class="top-img">
+                            <h2 class="blind">메인배너 오른쪽 상단 이미지</h2>
+                            <a href="#">
+                                <img src="./assets/images/visual-right-top.jpg" alt class="bg">
+                                <span>'약자동행지수' 개발, 약자 정책 평가·활용 최초의 시도</span>
+                            </a>
+                        </section>
+                        <section class="bottom-img">
+                            <h2 class="blind">메인배너오른쪽 하단 텍스트 이미지</h2>
                             <a href="#" class="bg-wrap">
                                 <img src="./assets/images/visual-bottom.png" alt="서울특별시장 오세훈입니다.">
                             </a>
@@ -271,83 +257,71 @@
                                 <a href="#" class="area-item"><img src="./assets/images/btn-mayorlink4.png"
                                         alt="설문조사"></a>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
                 <section class="inner2">
                     <h2 class="headline">주요 서비스</h2>
-                    <div class="service-wrap">
+                    <div class="content">
                         <a href="#" class="service-more">전체누리집</a>
                         <ul class="service-list">
                             <li class="public">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>공공서비스예약</span>
                                 </a>
                             </li>
                             <li class="answer">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>응답소(민원신고)</span>
                                 </a>
                             </li>
                             <li class="job">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>서울일자리</span>
                                 </a>
                             </li>
                             <li class="realestate">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>부동산정보</span>
                                 </a>
                             </li>
                             <li class="portal">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>서울런</span>
                                 </a>
                             </li>
                             <li class="welfare">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>서울복지포털</span>
                                 </a>
                             </li>
                             <li class="house">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>서울주거포털</span>
                                 </a>
                             </li>
                             <li class="young">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>청년몽땅정보통</span>
                                 </a>
                             </li>
                             <li class="mediahub">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>내 손안에 서울</span>
                                 </a>
                             </li>
                             <li class="democracy">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>상상대로 서울</span>
                                 </a>
                             </li>
                             <li class="ebook">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>전자책</span>
                                 </a>
                             </li>
                             <li class="council">
                                 <a href="#">
-                                    <i class="ico-bg"></i>
                                     <span>시의회</span>
                                 </a>
                             </li>
@@ -467,60 +441,51 @@
                 </div>
                 <section class="inner5">
                     <h2 class="headline">분야별정보</h2>
-                    <ul class="information-list">
-                        <li class="information-item">
+                    <ul class="info-list">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_house.png" alt="주택이미지">
-                                <p>주택</p>
+                                <span>주택</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_economy.png" alt="경제이미지">
-                                <p>경제</p>
+                                <span>경제</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_traffic.png" alt="교통이미지">
-                                <p>교통</p>
+                                <span>교통</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_environment.png" alt="환경이미지">
-                                <p>환경</p>
+                                <span>환경</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_welfare.png" alt="복지이미지">
-                                <p>복지</p>
+                                <span>복지</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_safty.png" alt="안전이미지">
-                                <p>안전</p>
+                                <span>안전</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_culture.png" alt="문화이미지">
-                                <p>문화</p>
+                                <span>문화</span>
                             </a>
                         </li>
-                        <li class="information-item">
+                        <li>
                             <a href="#">
-                                <img src="./assets/images/icon_work.png" alt="행정이미지">
-                                <p>행정</p>
+                                <span>행정</span>
                             </a>
                         </li>
                     </ul>
                 </section>
                 <section class="inner6">
                     <h2 class="headline">새소식</h2>
-                    <p class="all-btn"><a href="#">전체보기</a></p>
                     <ul class="list">
                         <li class="list-item">
                             <a href="#">
@@ -595,85 +560,85 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="all-btn"><a href="#">전체보기</a></div>
                 </section>
-                <div class="inner7">
-                    <section class="left-board">
-                        <div class="information">
-                            <h2 class="headline">서울영상</h2>
-                            <a href="#" class="info-wrap">
-                                <p class="img-wrap">
-                                    <img src="./assets/images/notice-left.jpg" alt="물과 사람, 자연이 함께 살아가는 서울!">
-                                </p>
-                                <p class="txt">물과 사람, 자연이 함께 살아가는 서울!</p>
-                            </a>
-                        </div>
-                        <div class="News">
-                            <h2 class="headline">서울소식</h2>
-                            <ul class="News-list">
-                                <li class="News-item">
-                                    <span class="title">고시공고</span>
-                                    <a href="#" class="link-txt">종합공사시공업 행정처분(영업정지) 공고</a>
-                                </li>
-                                <li class="News-item">
-                                    <span class="title">입찰공고</span>
-                                    <a href="#" class="link-txt">[용역입찰공고] 2024~2025년 서울시 챗봇 시스템 유지관리 용역</a>
-                                </li>
-                                <li class="News-item">
-                                    <span class="title">채용시험</span>
-                                    <a href="#" class="link-txt">서울시동부권직장맘지원센터 기획협력팀장 채용 공고</a>
-                                </li>
-                                <li class="News-item">
-                                    <span class="title">보도자료</span>
-                                    <a href="#" class="link-txt">활력 넘치는 노년 생활! `서울시 스마트경로당`으로 진화 중</a>
-                                </li>
-                            </ul>
-                        </div>
+                <section class="inner7">
+                    <h2 class="blind">서울영상,서울소식,서울시 SNS 모아보기</h2>
+                    <section class="info">
+                        <h3 class="headline">서울영상</h3>
+                        <a href="#" class="info-wrap">
+                            <div class="img-wrap">
+                                <img src="./assets/images/notice-left.jpg" alt="물과 사람, 자연이 함께 살아가는 서울!">
+                            </div>
+                            <p class="txt">물과 사람, 자연이 함께 살아가는 서울!</p>
+                        </a>
                     </section>
-                    <section class="right-board">
-                        <h2 class="blind">서울시 SNS 모아보기</h2>
+                    <section class="News">
+                        <h3 class="headline">서울소식</h3>
+                        <ul class="News-list">
+                            <li>
+                                <a href="#" class="title">고시공고</a>
+                                <a href="#" class="link-txt">종합공사시공업 행정처분(영업정지) 공고</a>
+                            </li>
+                            <li>
+                                <a href="#" class="title">입찰공고</a>
+                                <a href="#" class="link-txt">[용역입찰공고] 2024~2025년 서울시 챗봇 시스템 유지관리 용역</a>
+                            </li>
+                            <li>
+                                <a href="#" class="title">채용시험</a>
+                                <a href="#" class="link-txt">서울시동부권직장맘지원센터 기획협력팀장 채용 공고</a>
+                            </li>
+                            <li>
+                                <a href="#" class="title">보도자료</a>
+                                <a href="#" class="link-txt">활력 넘치는 노년 생활! `서울시 스마트경로당`으로 진화 중</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="sns">
+                        <h3 class="blind">서울시 SNS 모아보기</h3>
                         <a href="#" class="sns-banner">
                             <span class="title">서울시 SNS</span>
                             <span class="more">전체보기</span>
                         </a>
-                        <ul class="right-list">
-                            <li class="list-item">
+                        <ul class="sns-list">
+                            <li>
                                 <a href="#" class="item-link facebook">
                                     <span class="blind">페이스북</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link insta">
                                     <span class="blind">인스타그램</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link youtube">
                                     <span class="blind">유튜브</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link twitter">
                                     <span class="blind">트위터</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link blog">
                                     <span class="blind">블로그</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link kakaostory">
                                     <span class="blind">카카오스토리</span>
                                 </a>
                             </li>
-                            <li class="list-item">
+                            <li>
                                 <a href="#" class="item-link kakaochannel">
                                     <span class="blind">카카오채널</span>
                                 </a>
                             </li>
                         </ul>
                     </section>
-                </div>
+                </section>
                 <section class="inner8">
                     <h2 class="blind">팝업존</h2>
                     <div class="swiper">
@@ -727,10 +692,13 @@
                         </div>
                     </div>
                     <div class="control">
-                        <div class="pagers">
-                            <span class="index_count"></span>
+                        <div class="fraction"></div>
+                        <div class="btn-wrap">
+                            <button class="btn-prev"><span class="blind">이전버튼</span></button>
+                            <button class="btn-autoplay on"><span class="blind">자동재생정지</span></button>
+                            <button class="btn-next"><span class="blind">다음버튼</span></button>
                         </div>
-                        <ul class="number">
+                        <!-- <ul class="number">
                             <li class="btn-prev">
                                 <a class="bx-prev" href="#">이전</a>
                             </li>
@@ -741,20 +709,19 @@
                             <li class="btn-next">
                                 <a class="bx-next" href="#">다음</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </section>
                 <section class="inner9">
                     <h2 class="blind">하단리스트</h2>
                     <div class="bottom-wrap">
-                        <ul class="bottom-menu">
-                            <li class="bottom-item">
+                        <ul class="relate-list">
+                            <li class="relate-item">
                                 <button type="button" class="btn-related">
                                     <span class="txt-related">직속기관·사업소</span>
                                     <em class="blind">펼치기</em>
                                 </button>
                                 <div class="menu-list list1">
-                                    <h3 class="blind">직속기관·사업소</h3>
                                     <ul>
                                         <li><a href="#">서울시립대학교</a></li>
                                         <li><a href="#">보건환경연구원</a></li>
@@ -786,7 +753,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="bottom-item">
+                            <li class="relate-item">
                                 <button type="button" class="btn-related">
                                     <span class="txt-related">공사·출연기관</span>
                                     <em class="blind">펼치기</em>
@@ -827,7 +794,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="bottom-item">
+                            <li class="relate-item">
                                 <button type="button" class="btn-related">
                                     <span class="txt-related">자치구</span>
                                     <em class="blind">펼치기</em>
@@ -863,12 +830,12 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="bottom-item">
+                            <li class="relate-item">
                                 <button type="button" class="btn-related">
                                     <span class="txt-related none">중앙행정기관</span>
                                 </button>
                             </li>
-                            <li class="bottom-item">
+                            <li class="relate-item">
                                 <button type="button" class="btn-related">
                                     <span class="txt-related">지방자치단체·유관기관</span>
                                     <em class="blind">펼치기</em>
@@ -907,13 +874,13 @@
                 <div class="footer-top">
                     <ul class="left-text">
                         <li><a href="#">누리집 도우미</a></li>
-                        <li class="second"><a href="#">개인정보처리방침</a></li>
+                        <li class="bold"><a href="#">개인정보처리방침</a></li>
                         <li><a href="#">저작권 정책</a></li>
                         <li><a href="#">영상정보처리기기 운영 관리방침</a></li>
                         <li><a href="#">누리집 바로잡기</a></li>
                         <li><a href="#">누리집지도</a></li>
                     </ul>
-                    <div class="right-img">
+                    <div class="sns-list">
                         <a href="#">페이스북</a>
                         <a href="#">인스타그램</a>
                         <a href="#">유튜브</a>
@@ -924,15 +891,15 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <div class="logo">
+                    <div class="qna-area">
                         <span class="blind">문의 전화번호 120, 정보를 못찾으셨나요? 120 다산콜센터로 물어보세요!</span>
                     </div>
-                    <address>
+                    <address class="add-area">
                         <p class="addr">서울특별시청 04524 서울특별시 중구 세종대로 110 [찾아오시는 길]</p>
                         <p class="addr">대표전화: 02-120 또는 02-731-2120</p>
                         <small class="copy">© Seoul Metropolitan Government all rights reserved</span>
                     </address>
-                    <div class="right-logo">
+                    <div class="mark-area">
                         <a href="#"><img src="./assets/images/footer_mark2.png" alt="과학기술정보통신원"></a>
                     </div>
                 </div>

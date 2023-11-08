@@ -21,7 +21,7 @@
                 }
             }
 
-            &.second a {
+            &.bold a {
                 color: #000;
                 font-weight: 700;
             }
@@ -49,7 +49,7 @@
         }
     }
 
-    .right-img {
+    .sns-list {
         position: absolute;
         top: 50%;
         right: 0;
@@ -110,7 +110,7 @@
     padding: 22px 0;
     border-top: 1px solid #ccc;
 
-    .logo {
+    .qna-area {
         margin-right: 40px;
         float: left;
         width: 108px;
@@ -136,7 +136,7 @@
         }
     }
 
-    .right-logo {
+    .mark-area {
         position: absolute;
         top: 20px;
         right: 0;
